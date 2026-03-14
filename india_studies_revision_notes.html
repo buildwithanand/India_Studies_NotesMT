@@ -1,0 +1,1679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>India Studies – Last Minute Revision Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f6f3;
+    --sidebar: #ffffff;
+    --text: #1a1a1a;
+    --muted: #6b7280;
+    --border: #e5e5e0;
+    --accent-yellow: #f5e642;
+    --accent-orange: #ff6b35;
+    --accent-blue: #2563eb;
+    --accent-green: #16a34a;
+    --accent-red: #dc2626;
+    --accent-purple: #7c3aed;
+    --accent-teal: #0891b2;
+    --tag-bg: #ede9fe;
+    --tag-text: #5b21b6;
+    --callout-bg: #fef9c3;
+    --callout-border: #fde047;
+    --card-bg: #ffffff;
+    --shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Space Grotesk', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    display: flex;
+    min-height: 100vh;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* SIDEBAR */
+  #sidebar {
+    width: 260px;
+    min-width: 260px;
+    background: var(--sidebar);
+    border-right: 1px solid var(--border);
+    padding: 24px 0;
+    position: fixed;
+    top: 0; left: 0;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 100;
+  }
+  .sidebar-title {
+    font-family: 'Lora', serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0 20px 12px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 8px;
+  }
+  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 20px;
+    cursor: pointer;
+    border-radius: 0;
+    color: var(--muted);
+    font-size: 13.5px;
+    font-weight: 500;
+    transition: all 0.15s;
+    text-decoration: none;
+  }
+  .nav-item:hover { background: #f0ede8; color: var(--text); }
+  .nav-item.active { background: #f0ede8; color: var(--text); border-left: 3px solid var(--accent-orange); padding-left: 17px; }
+  .nav-icon { font-size: 14px; width: 18px; }
+  .nav-section { font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; padding: 16px 20px 4px; }
+
+  /* MAIN */
+  #main {
+    margin-left: 260px;
+    flex: 1;
+    max-width: 860px;
+    padding: 48px 56px;
+  }
+
+  /* PAGE HEADER */
+  .page-header {
+    margin-bottom: 48px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--border);
+  }
+  .page-emoji { font-size: 48px; margin-bottom: 12px; display: block; }
+  .page-title {
+    font-family: 'Lora', serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+  .page-subtitle { color: var(--muted); font-size: 15px; font-weight: 400; }
+  .page-meta { display: flex; gap: 12px; margin-top: 16px; flex-wrap: wrap; }
+  .badge {
+    background: var(--tag-bg);
+    color: var(--tag-text);
+    border-radius: 4px;
+    padding: 2px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .badge.green { background: #dcfce7; color: #166534; }
+  .badge.orange { background: #fff7ed; color: #9a3412; }
+  .badge.blue { background: #dbeafe; color: #1e40af; }
+
+  /* SECTIONS */
+  .section {
+    margin-bottom: 56px;
+    scroll-margin-top: 32px;
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-icon { font-size: 22px; }
+  .section-title {
+    font-family: 'Lora', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text);
+  }
+  .section-badge {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    background: var(--accent-orange);
+    color: #fff;
+    border-radius: 3px;
+    padding: 2px 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  /* SUBSECTIONS */
+  h3 {
+    font-family: 'Lora', serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text);
+    margin: 28px 0 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  h3::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 16px;
+    background: var(--accent-orange);
+    border-radius: 2px;
+  }
+  h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    margin: 20px 0 8px;
+  }
+
+  /* CALLOUT */
+  .callout {
+    background: var(--callout-bg);
+    border-left: 4px solid var(--callout-border);
+    border-radius: 0 8px 8px 0;
+    padding: 14px 18px;
+    margin: 16px 0;
+    font-size: 14px;
+  }
+  .callout.blue { background: #eff6ff; border-color: #3b82f6; }
+  .callout.green { background: #f0fdf4; border-color: #22c55e; }
+  .callout.red { background: #fef2f2; border-color: #ef4444; }
+  .callout.purple { background: #faf5ff; border-color: #a855f7; }
+  .callout strong { font-weight: 700; }
+  .callout-title { font-weight: 700; margin-bottom: 4px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; }
+
+  /* TABLE */
+  .table-wrap { overflow-x: auto; margin: 16px 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; background: var(--card-bg); border-radius: 8px; overflow: hidden; box-shadow: var(--shadow); }
+  th { background: #1a1a1a; color: #fff; padding: 10px 14px; text-align: left; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+  td { padding: 9px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: #f9f9f8; }
+  td:first-child { font-weight: 600; color: var(--accent-blue); }
+
+  /* LIST */
+  .concept-list { list-style: none; margin: 12px 0; }
+  .concept-list li {
+    padding: 8px 12px 8px 32px;
+    position: relative;
+    border-radius: 6px;
+    margin-bottom: 4px;
+    font-size: 14px;
+    line-height: 1.5;
+    transition: background 0.1s;
+  }
+  .concept-list li:hover { background: #f0ede8; }
+  .concept-list li::before {
+    content: '→';
+    position: absolute;
+    left: 10px;
+    color: var(--accent-orange);
+    font-weight: 700;
+  }
+  .concept-list li strong { color: var(--text); font-weight: 600; }
+
+  /* KEY CARD */
+  .key-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-bottom: 12px;
+    box-shadow: var(--shadow);
+  }
+  .key-card-title {
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--text);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .key-card p { font-size: 13.5px; color: #374151; line-height: 1.6; }
+
+  /* ARTICLE PILL */
+  .art {
+    display: inline-block;
+    background: #1a1a1a;
+    color: #f5e642;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    font-weight: 700;
+    border-radius: 4px;
+    padding: 1px 7px;
+    margin-right: 4px;
+    vertical-align: middle;
+  }
+  .art.green { background: #166534; color: #bbf7d0; }
+  .art.blue { background: #1e40af; color: #bfdbfe; }
+  .art.red { background: #991b1b; color: #fecaca; }
+  .art.purple { background: #5b21b6; color: #ede9fe; }
+
+  /* CASE LAW */
+  .case {
+    background: #faf5ff;
+    border: 1px solid #d8b4fe;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 8px 0;
+    font-size: 13.5px;
+  }
+  .case-name { font-weight: 700; color: #5b21b6; margin-bottom: 4px; }
+  .case-held { color: #374151; }
+
+  /* AMENDMENT CARD */
+  .amend-card {
+    display: flex;
+    gap: 14px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 10px;
+    align-items: flex-start;
+    box-shadow: var(--shadow);
+  }
+  .amend-num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    font-weight: 700;
+    background: var(--accent-orange);
+    color: #fff;
+    border-radius: 6px;
+    padding: 4px 10px;
+    white-space: nowrap;
+    align-self: flex-start;
+  }
+  .amend-content { font-size: 13.5px; line-height: 1.5; }
+  .amend-content strong { display: block; margin-bottom: 2px; }
+
+  /* COMPARISON GRID */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 16px 0;
+  }
+  .compare-col {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: var(--shadow);
+  }
+  .compare-col-title {
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .compare-col-title.left { color: var(--accent-blue); border-color: var(--accent-blue); }
+  .compare-col-title.right { color: var(--accent-orange); border-color: var(--accent-orange); }
+  .compare-col ul { list-style: none; }
+  .compare-col ul li { padding: 4px 0; font-size: 13.5px; padding-left: 16px; position: relative; }
+  .compare-col ul li::before { content: '•'; position: absolute; left: 0; font-weight: 700; }
+  .compare-col.left ul li::before { color: var(--accent-blue); }
+  .compare-col.right ul li::before { color: var(--accent-orange); }
+
+  /* WRIT GRID */
+  .writ-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 16px 0; }
+  .writ-card {
+    background: #1a1a1a;
+    color: #fff;
+    border-radius: 10px;
+    padding: 16px;
+  }
+  .writ-name { font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 700; color: #f5e642; margin-bottom: 6px; }
+  .writ-meaning { font-size: 12px; color: #9ca3af; margin-bottom: 6px; font-style: italic; }
+  .writ-desc { font-size: 12.5px; color: #d1d5db; line-height: 1.5; }
+
+  /* TIMELINE */
+  .timeline { position: relative; margin: 16px 0; padding-left: 28px; }
+  .timeline::before { content: ''; position: absolute; left: 8px; top: 0; bottom: 0; width: 2px; background: var(--border); }
+  .timeline-item { position: relative; margin-bottom: 16px; }
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -24px;
+    top: 6px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent-orange);
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 2px var(--accent-orange);
+  }
+  .timeline-date { font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; }
+  .timeline-title { font-weight: 600; font-size: 14px; color: var(--text); }
+  .timeline-desc { font-size: 13px; color: #6b7280; }
+
+  /* RIGHTS TABLE CUSTOM */
+  .art-block {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 10px;
+    box-shadow: var(--shadow);
+  }
+  .art-block-header { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .art-block-title { font-weight: 700; font-size: 15px; }
+  .art-block-body { font-size: 13.5px; color: #374151; line-height: 1.6; }
+  .art-block-body ul { padding-left: 18px; margin-top: 6px; }
+  .art-block-body ul li { margin-bottom: 3px; }
+
+  /* SOURCES GRID */
+  .source-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; margin: 16px 0; }
+  .source-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 13px;
+    box-shadow: var(--shadow);
+  }
+  .source-country { font-weight: 700; color: var(--accent-blue); margin-bottom: 4px; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .source-items { color: #374151; }
+
+  /* DPSP TABLE */
+  .dpsp-table { font-size: 13px; }
+  .dpsp-table td:first-child { width: 80px; color: var(--text); font-family: 'IBM Plex Mono', monospace; }
+
+  /* HIGHLIGHT QUOTE */
+  .highlight-quote {
+    background: #1a1a1a;
+    color: var(--accent-yellow);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin: 20px 0;
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 15px;
+    line-height: 1.7;
+    position: relative;
+  }
+  .highlight-quote::before { content: '"'; font-size: 48px; position: absolute; top: -8px; left: 16px; line-height: 1; opacity: 0.3; }
+  .highlight-quote cite { display: block; font-style: normal; font-size: 12px; color: #9ca3af; margin-top: 8px; font-family: 'Space Grotesk', sans-serif; }
+
+  /* DUTY LIST */
+  .duty-list { counter-reset: duty; }
+  .duty-item {
+    display: flex;
+    gap: 12px;
+    padding: 10px 14px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 8px;
+    font-size: 13.5px;
+    align-items: flex-start;
+  }
+  .duty-num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    background: var(--accent-blue);
+    border-radius: 4px;
+    padding: 2px 7px;
+    white-space: nowrap;
+  }
+
+  /* PRINT-FRIENDLY */
+  @media print {
+    #sidebar { display: none; }
+    #main { margin-left: 0; padding: 20px; max-width: 100%; }
+    .section { break-inside: avoid; }
+  }
+
+  /* SCROLL TARGET */
+  section[id] { scroll-margin-top: 32px; }
+
+  /* DIVIDER */
+  .divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
+
+  code {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    background: #f0ede8;
+    padding: 1px 6px;
+    border-radius: 3px;
+  }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 12px 0; }
+  @media (max-width: 700px) { .two-col, .compare-grid, .source-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<nav id="sidebar">
+  <div class="sidebar-title">📚 India Studies Notes</div>
+  <div class="nav-section">Traditional Knowledge</div>
+  <a class="nav-item active" href="#tk"><span class="nav-icon">🌿</span> Traditional Knowledge</a>
+  <a class="nav-item" href="#ik"><span class="nav-icon">🪶</span> Indigenous Knowledge</a>
+  <a class="nav-item" href="#culture"><span class="nav-icon">🎭</span> Culture & Civilization</a>
+  <a class="nav-item" href="#science"><span class="nav-icon">⚗️</span> Science & Tech in India</a>
+  <div class="nav-section">Indian Constitution</div>
+  <a class="nav-item" href="#intro"><span class="nav-icon">📜</span> Constitution Intro & Preamble</a>
+  <a class="nav-item" href="#sources"><span class="nav-icon">🌐</span> Sources of Constitution</a>
+  <a class="nav-item" href="#features"><span class="nav-icon">🔑</span> Salient Features</a>
+  <a class="nav-item" href="#citizenship"><span class="nav-icon">🪪</span> Citizenship (Art 5–11)</a>
+  <a class="nav-item" href="#fr"><span class="nav-icon">⚖️</span> Fundamental Rights</a>
+  <a class="nav-item" href="#writs"><span class="nav-icon">🔨</span> Writs</a>
+  <a class="nav-item" href="#fd"><span class="nav-icon">🫡</span> Fundamental Duties</a>
+  <a class="nav-item" href="#dpsp"><span class="nav-icon">🏛️</span> DPSP</a>
+  <a class="nav-item" href="#amendments"><span class="nav-icon">✏️</span> Key Amendments</a>
+  <div class="nav-section">State Government</div>
+  <a class="nav-item" href="#governor"><span class="nav-icon">🏛️</span> Governor</a>
+  <a class="nav-item" href="#cm"><span class="nav-icon">👤</span> CM & Council of Ministers</a>
+  <a class="nav-item" href="#legislature"><span class="nav-icon">🗳️</span> State Legislature</a>
+  <div class="nav-section">Union Government</div>
+  <a class="nav-item" href="#pm"><span class="nav-icon">🧳</span> PM & Union Ministers</a>
+  <a class="nav-item" href="#caselaws"><span class="nav-icon">📋</span> Master Case Law List</a>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main id="main">
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <span class="page-emoji">🇮🇳</span>
+    <h1 class="page-title">India Studies — Last Minute Revision</h1>
+    <p class="page-subtitle">Complete notes covering Traditional Knowledge, Culture, Science & Tech, and Indian Constitution for exam preparation</p>
+    <div class="page-meta">
+      <span class="badge">VIT Course</span>
+      <span class="badge green">All Articles Covered</span>
+      <span class="badge orange">Key Amendments Highlighted</span>
+      <span class="badge blue">Case Laws Included</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SECTION 1: TRADITIONAL KNOWLEDGE -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="section" id="tk">
+    <div class="section-header">
+      <span class="section-icon">🌿</span>
+      <h2 class="section-title">Traditional Knowledge (TK)</h2>
+      <span class="section-badge">Unit 1</span>
+    </div>
+
+    <div class="callout">
+      <div class="callout-title">📌 Definition (WIPO)</div>
+      TK refers to knowledge, innovations, and practices of <strong>indigenous and local communities</strong> — developed over centuries, adapted to local culture and environment, collectively owned, and transmitted <strong>orally</strong> from generation to generation.
+    </div>
+
+    <h3>What TK Includes</h3>
+    <ul class="concept-list">
+      <li><strong>Medicinal, Agricultural & Ecological Knowledge</strong></li>
+      <li><strong>Music, Dance, Stories & Poetry</strong></li>
+      <li><strong>Handicrafts (Artesanat)</strong></li>
+      <li><strong>Spiritual Expression</strong></li>
+      <li>Literary, artistic or scientific works; performances; inventions; scientific discoveries; designs; marks, names, symbols</li>
+    </ul>
+
+    <h3>Characteristics of Traditional Knowledge</h3>
+    <ul class="concept-list">
+      <li>Dynamic, methodical, and universal in nature</li>
+      <li>Transmitted <strong>verbally</strong>, not in writing</li>
+      <li><strong>Holistic</strong> — cannot be compartmentalised, inseparable from the people</li>
+      <li>Based on observational experience → useful for decision-making</li>
+      <li>Associated with <strong>sustainable use</strong> of native resources</li>
+      <li>Acts as an authority/governance system (respect, obligation to share)</li>
+    </ul>
+
+    <h3>TK vs. Scientific Knowledge</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Dimension</th><th>Indigenous / TK</th><th>Scientific Knowledge</th></tr>
+        <tr><td>Truth status</td><td>Assumed to be the truth</td><td>Best approximation</td></tr>
+        <tr><td>Domain</td><td>Sacred and secular</td><td>Secular only</td></tr>
+        <tr><td>Teaching</td><td>Storytelling, learning by doing</td><td>Didactic, formal education</td></tr>
+        <tr><td>Medium</td><td>Oral / Visual</td><td>Written</td></tr>
+        <tr><td>Approach</td><td>Holistic, integrated</td><td>Reductionist, analytical</td></tr>
+        <tr><td>Nature</td><td>Intuitive, subjective</td><td>Objective, positivist</td></tr>
+        <tr><td>Prediction</td><td>Powerful locally, weak in distant areas</td><td>Strong in principles, weak locally</td></tr>
+        <tr><td>Modelling</td><td>Cycle-based models</td><td>Linear modelling</td></tr>
+        <tr><td>Classification</td><td>Non-hierarchical, includes supernatural</td><td>Hierarchical (phylogenic), excludes supernatural</td></tr>
+      </table>
+    </div>
+
+    <h3>Challenges to TK Preservation</h3>
+    <ul class="concept-list">
+      <li>Lack of adequate management & documentation</li>
+      <li>Knowledge is eroding — elders die, knowledge is lost</li>
+      <li>Competition from other cultures captures young people's imagination</li>
+      <li>Commercialisation and economic instability destroy TK</li>
+    </ul>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SECTION 2: INDIGENOUS KNOWLEDGE -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="section" id="ik">
+    <div class="section-header">
+      <span class="section-icon">🪶</span>
+      <h2 class="section-title">Indigenous Knowledge (IK)</h2>
+    </div>
+
+    <div class="callout blue">
+      <div class="callout-title">📖 Definition</div>
+      <strong>Johnson (1992):</strong> "A body of knowledge built up by a group of people through generations of living in close contact with nature."<br><br>
+      <strong>UN Definition of "Indigenous":</strong> Groups whose social, cultural and economic conditions distinguish them from other sections of national communities, and whose status is regulated by their own customs, traditions or special laws/regulations.
+    </div>
+
+    <h3>IK vs. Western Knowledge</h3>
+    <div class="compare-grid">
+      <div class="compare-col left">
+        <div class="compare-col-title left">Indigenous Knowledge</div>
+        <ul>
+          <li>Visual/oral representation</li>
+          <li>Learning by doing & experiencing</li>
+          <li>Holistic approach</li>
+          <li>Subjective</li>
+          <li>Knowledge through storytelling</li>
+          <li>Community-based</li>
+        </ul>
+      </div>
+      <div class="compare-col right">
+        <div class="compare-col-title right">Western Knowledge</div>
+        <ul>
+          <li>Based on written words</li>
+          <li>Through formal education</li>
+          <li>Reductionist approach</li>
+          <li>Objective</li>
+          <li>Didactic approach</li>
+          <li>Individual-based</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Significance of IK</h3>
+    <ul class="concept-list">
+      <li>Survival of humans depends on wholeness of nature</li>
+      <li>Describes circumstances of communities in connection to the environment</li>
+      <li>Explains cultural behaviours from human adaptation to environment</li>
+      <li>A mix of applied education, economics, politics, religion, sciences, and technologies</li>
+    </ul>
+
+    <h3>Importance</h3>
+    <ul class="concept-list">
+      <li>Local empowerment, development, self-sufficiency, self-determination</li>
+      <li>Valuable information on managing local environment</li>
+      <li>Provides problem-solving solutions especially for marginalised communities</li>
+      <li>Important component of global knowledge on development challenges</li>
+    </ul>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SECTION 3: CULTURE & CIVILIZATION -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="section" id="culture">
+    <div class="section-header">
+      <span class="section-icon">🎭</span>
+      <h2 class="section-title">Culture & Civilization</h2>
+    </div>
+
+    <div class="callout purple">
+      <div class="callout-title">📖 Key Definitions</div>
+      <strong>Culture (Edward B. Tylor, 1871, Primitive Culture):</strong> "That complex whole which includes knowledge, belief, art, law, morals, custom, and any other capabilities and habits acquired by man as a member of society."<br><br>
+      Etymology: from Latin <em>cult or cultus</em> = tilling, cultivating, refining and worship. Sanskrit equivalent: <strong>Sanskriti</strong>.
+    </div>
+
+    <h3>Types of Culture</h3>
+    <div class="two-col">
+      <div class="key-card">
+        <div class="key-card-title">📦 Material Culture</div>
+        <p>Dress, food, household goods, technologies, instruments, material goods, modes of production, trade, commerce, architecture. <strong>Changes QUICKLY.</strong></p>
+      </div>
+      <div class="key-card">
+        <div class="key-card-title">💡 Non-Material Culture</div>
+        <p>Ideas, ideals, thoughts, beliefs, norms, values, myths, legends, literature, ritual, art forms. <strong>Changes SLOWLY.</strong></p>
+      </div>
+    </div>
+
+    <div class="callout red">
+      <div class="callout-title">⚡ Cultural Lag — William F. Ogburn</div>
+      The gap/imbalance in the rate of change between material and non-material culture. Material culture changes fast; non-material is slow to respond → creating a "lag". Example: Indians adopt western technology but retain traditional beliefs.
+    </div>
+
+    <h3>Elements of Culture (H.M. Johnson)</h3>
+    <ul class="concept-list">
+      <li><strong>Cognitive Elements</strong> — Knowledge about physical and social world</li>
+      <li><strong>Beliefs</strong> — Empirically neither true nor false (e.g., Ganga water sacred; Sikhs wear bangles)</li>
+      <li><strong>Values & Norms</strong> — Measures of goodness, standards of behaviour; socially produced</li>
+      <li><strong>Symbols</strong> — Flags, anthem, statues, gestures</li>
+      <li><strong>Language</strong> — Vehicle of culture; entrance into a culture</li>
+    </ul>
+
+    <h3>Characteristics of Culture</h3>
+    <ul class="concept-list">
+      <li><strong>Social</strong> — product of society, not individual</li>
+      <li><strong>Learned behaviour</strong> — not biologically inherited</li>
+      <li><strong>Transmitted</strong> — parent to child via language</li>
+      <li><strong>Gratifying</strong> — satisfies biological and social needs</li>
+      <li><strong>Varies</strong> — every culture is unique to its society</li>
+      <li><strong>Continuous & Cumulative</strong> — memory of human race, always adding</li>
+      <li><strong>Dynamic</strong> — changes but not static</li>
+    </ul>
+
+    <h3>Functions of Culture</h3>
+    <ul class="concept-list">
+      <li>Treasury of knowledge | Defines situations | Defines attitude, values, goals</li>
+      <li>Decides our career | Provides behaviour pattern | Moulds personality</li>
+    </ul>
+
+    <hr class="divider">
+
+    <h3>Civilization vs. Culture</h3>
+    <div class="callout">
+      <strong>Etymology:</strong> "Civilization" from Latin <em>Civitas</em> = city. Goldenweiser used both terms identically. MacIver & Page: "Civilization is the whole apparatus of life."
+    </div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Civilization</th><th>Culture</th></tr>
+        <tr><td>Has a precise standard of measurement</td><td>Cannot be precisely measured</td></tr>
+        <tr><td>Always advancing (technical achievement improves past)</td><td>Not necessarily advancing (Gautama Buddha not surpassed)</td></tr>
+        <tr><td>More easily communicated (e.g., radio)</td><td>Less easily communicated (e.g., poetic talent)</td></tr>
+        <tr><td>Borrowed without loss/change (technical devices)</td><td>Difficult to borrow intact (foreigner following Indian culture)</td></tr>
+        <tr><td>External (material wealth)</td><td>Internal (intrinsic values)</td></tr>
+      </table>
+    </div>
+
+    <h3>Cultural Heritage</h3>
+    <ul class="concept-list">
+      <li>Culture inherited from predecessors = <strong>Cultural Heritage</strong></li>
+      <li>Levels: <strong>Human heritage → National heritage</strong></li>
+      <li>Ministry of Culture preserves & promotes cultural heritage</li>
+      <li>Network: 6 attached offices + 2 subordinate offices + 33 autonomous organisations</li>
+      <li>Key bodies: National Museum, National Gallery of Modern Art, Archaeological Survey of India, National Archives of India, Anthropological Survey of India</li>
+    </ul>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SECTION 4: SCIENCE & TECH IN ANCIENT INDIA -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="section" id="science">
+    <div class="section-header">
+      <span class="section-icon">⚗️</span>
+      <h2 class="section-title">Science & Technology in Ancient India</h2>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>Field</th><th>Key Facts</th></tr>
+        <tr><td>Mathematics</td><td><strong>Ganita</strong> = broad word. Zero discovered in India (<strong>2nd century BC</strong>). First text mentioning zero = <strong>Brahmagupta's Brahmasputa Siddhanta</strong>. Aryabhatta = algebra, area of triangle → trigonometry. Sulvasutras = source of Indian maths.</td></tr>
+        <tr><td>Astronomy</td><td><strong>Jyotishvedanga</strong> texts → systematic astronomy. <strong>Aryabhatta (499 AD)</strong> — marked shift from astrology to science. Planetary motion emphasised.</td></tr>
+        <tr><td>Medicine</td><td><strong>Takshila & Varanasi</strong> as hubs. <strong>Charaksamhita</strong> (Charak) — plants and herbs. <strong>Sushrutasamhita</strong> (Sushruta) — surgery as separate stream (~4th century AD). Work spread to China and Central Asia.</td></tr>
+        <tr><td>Metallurgy</td><td>By <strong>1st century AD</strong>: iron, copper, silver, gold, brass, bronze. <strong>Iron Pillar (Qutub Minar complex)</strong> — exceptional alloying. Dyeing textiles: quality seen in Ajanta frescoes.</td></tr>
+        <tr><td>Geography</td><td>People studied geography due to ongoing interplay with environment</td></tr>
+      </table>
+    </div>
+
+    <h3>Sanskrit Terminology — Mathematics</h3>
+    <ul class="concept-list">
+      <li><strong>Anka Ganita</strong> — calculations on board (Arithmetic)</li>
+      <li><strong>Pattin Ganita</strong> — calculations with numerals</li>
+      <li><strong>Rekha Ganita</strong> — Geometry (line works)</li>
+      <li><strong>Bija Ganita</strong> — Algebra (seed analysis)</li>
+      <li><strong>Jyotisa</strong> — Astronomy and Astrology</li>
+    </ul>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SECTION 5: CONSTITUTION INTRO & PREAMBLE -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="section" id="intro">
+    <div class="section-header">
+      <span class="section-icon">📜</span>
+      <h2 class="section-title">Constitution of India — Introduction & Preamble</h2>
+      <span class="section-badge">Unit 1</span>
+    </div>
+
+    <div class="callout green">
+      <div class="callout-title">⚡ Quick Stats</div>
+      • Came into force: <strong>26 January 1950</strong> | Adopted: <strong>26 November 1949</strong><br>
+      • Original: 395 Articles, 8 Schedules, 22 Parts<br>
+      • Current (2021): ~<strong>448 Articles, 25 Parts, 12 Schedules</strong><br>
+      • Time to draft: <strong>2 years, 11 months, 18 days</strong><br>
+      • Constituent Assembly first met: <strong>9 Dec 1946</strong> | President: <strong>Dr. Rajendra Prasad</strong> | Vice-President: <strong>H.C. Mukerjee</strong>
+    </div>
+
+    <h3>Preamble</h3>
+    <div class="highlight-quote">
+      We, the people of India, having solemnly resolved to constitute India into a Sovereign, Socialist Secular Democratic and Republic and to secure to its citizens: Justice, Social, Economic and Political; Liberty of thought, expression, belief, faith and worship; Equality of status and opportunity; and to promote among them all Fraternity assuring the dignity of the individual and the unity and the integrity of the Nation. In our Constituent Assembly this twenty-sixth day of November, 1949 do hereby, Adopt, Enact and Give to Ourselves this Constitution.
+      <cite>— Preamble to the Constitution of India</cite>
+    </div>
+
+    <h3>Nature of Indian State — S.S.S.D.R.</h3>
+    <div class="art-block">
+      <div class="art-block-header"><span class="art">1</span><span class="art-block-title">Sovereign</span></div>
+      <div class="art-block-body">Supreme power, independent, absolute and uncontrolled — internally supreme and externally free.</div>
+    </div>
+    <div class="art-block">
+      <div class="art-block-header"><span class="art blue">2</span><span class="art-block-title">Socialist</span></div>
+      <div class="art-block-body">Added by <strong>42nd Amendment Act, 1976</strong>. Aims at elimination of inequality in income, status and standards of life. India follows <em>"Democratic Socialism"</em> (mixed economy — both public and private sectors), NOT Communistic Socialism.</div>
+    </div>
+    <div class="art-block">
+      <div class="art-block-header"><span class="art green">3</span><span class="art-block-title">Secular</span></div>
+      <div class="art-block-body">Added by <strong>42nd Amendment Act, 1976</strong>. State does not recognise any religion. All religions treated equally. <strong>S.R. Bommai v. Union of India</strong> — SC held "secularism is basic feature of the Constitution." Articles 25–28 guarantee religious freedom.</div>
+    </div>
+    <div class="art-block">
+      <div class="art-block-header"><span class="art red">4</span><span class="art-block-title">Democratic</span></div>
+      <div class="art-block-body">Demo = People; Cracy = Rule. Authority from will of the people. <strong>Direct</strong> (Switzerland — Referendum, Initiative, Recall, Plebiscite) vs <strong>Indirect</strong> (India).</div>
+    </div>
+    <div class="art-block">
+      <div class="art-block-header"><span class="art purple">5</span><span class="art-block-title">Republic</span></div>
+      <div class="art-block-body">Head of state is NOT a hereditary monarch. India has an <strong>elected President</strong>.</div>
+    </div>
+
+    <h3>Objectives of Preamble (JELF)</h3>
+    <ul class="concept-list">
+      <li><strong>Justice</strong> — Social, Economic and Political</li>
+      <li><strong>Equality</strong> — of status and opportunity</li>
+      <li><strong>Liberty</strong> — of thought, expression, belief, faith and worship</li>
+      <li><strong>Fraternity</strong> — assuring dignity of individual and unity and integrity of the nation</li>
+    </ul>
+
+    <h3>Preamble — Key Facts</h3>
+    <ul class="concept-list">
+      <li>Objective Resolution moved by <strong>Nehru on 13 Dec 1946</strong>, adopted <strong>22 Jan 1947</strong></li>
+      <li>Words <strong>"Socialist," "Secular," and "Integrity"</strong> added by 42nd Amendment, 1976</li>
+      <li>Preamble does NOT grant any power; gives structure on which Constitution stands</li>
+      <li>Dr. Ambedkar: "Key to open the minds of the makers"</li>
+    </ul>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SECTION 6: SOURCES OF CONSTITUTION -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="section" id="sources">
+    <div class="section-header">
+      <span class="section-icon">🌐</span>
+      <h2 class="section-title">Sources of Indian Constitution</h2>
+    </div>
+
+    <h3>Historical Acts</h3>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">1773</div>
+        <div class="timeline-title">Regulating Act</div>
+        <div class="timeline-desc">Establishment of Supreme Court at Calcutta</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">1833 & 1853</div>
+        <div class="timeline-title">Charter Acts</div>
+        <div class="timeline-desc">Progressive legislation and governance changes</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">1858</div>
+        <div class="timeline-title">Government of India Act</div>
+        <div class="timeline-desc">Governor General of India changed to Viceroy of India</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">1861 & 1892</div>
+        <div class="timeline-title">Indian Councils Acts</div>
+        <div class="timeline-desc">Indians associated in law-making; initiated decentralisation</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">1909</div>
+        <div class="timeline-title">Morley-Minto Reforms</div>
+        <div class="timeline-desc">Communal representation for Muslims — <strong>"Separate Electorate"</strong></div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">1919</div>
+        <div class="timeline-title">Montague-Chelmsford Reforms</div>
+        <div class="timeline-desc">Demarcating and separating central and provincial subjects</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">1935</div>
+        <div class="timeline-title">Government of India Act <strong>(Most Borrowed)</strong></div>
+        <div class="timeline-desc">Provincial Legislative Assemblies (adult franchise); Three Lists; Separate electorates; Emergency Provisions; PSC; Judiciary; Federal Scheme</div>
+      </div>
+    </div>
+
+    <h3>Borrowed Features from Other Constitutions</h3>
+    <div class="source-grid">
+      <div class="source-card">
+        <div class="source-country">🇬🇧 Britain</div>
+        <div class="source-items">Writs; Parliamentary govt; Single Citizenship; Parliamentary Privileges; Rule of Law</div>
+      </div>
+      <div class="source-card">
+        <div class="source-country">🇺🇸 USA</div>
+        <div class="source-items">Fundamental Rights; Judicial Review; Impeachment of President; Removal of SC/HC Judges; Preamble; Independence of Judiciary</div>
+      </div>
+      <div class="source-card">
+        <div class="source-country">🇮🇪 Ireland</div>
+        <div class="source-items">DPSP; Method of election of President; Members nominated to Rajya Sabha</div>
+      </div>
+      <div class="source-card">
+        <div class="source-country">🇩🇪 Germany</div>
+        <div class="source-items">Emergency; Amendment procedure</div>
+      </div>
+      <div class="source-card">
+        <div class="source-country">🇷🇺 USSR</div>
+        <div class="source-items">Fundamental Duties</div>
+      </div>
+      <div class="source-card">
+        <div class="source-country">🇨🇦 Canada</div>
+        <div class="source-items">Federalism</div>
+      </div>
+      <div class="source-card">
+        <div class="source-country">🇦🇺 Australia</div>
+        <div class="source-items">Concurrent List; Freedom of Trade and Commerce</div>
+      </div>
+      <div class="source-card">
+        <div class="source-country">🇫🇷 France</div>
+        <div class="source-items">Ideals of Liberty, Equality, Fraternity and Republic (Preamble)</div>
+      </div>
+      <div class="source-card">
+        <div class="source-country">🇯🇵 Japan</div>
+        <div class="source-items">Procedure established by law</div>
+      </div>
+      <div class="source-card">
+        <div class="source-country">🇿🇦 South Africa</div>
+        <div class="source-items">Amendment by special majority</div>
+      </div>
+    </div>
+
+    <h3>Drafting Committee — 7 Members</h3>
+    <ul class="concept-list">
+      <li><strong>Dr. B.R. Ambedkar</strong> (Chairman)</li>
+      <li>Gopalswamy Ayyangar | Alladi Krishnaswamy Ayyar | Dr. K.M. Munshi</li>
+      <li>Syed Mohammed Saadullah | T.T. Krishnamachari | N. Madhava Rau</li>
+    </ul>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SECTION 7: SALIENT FEATURES -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="section" id="features">
+    <div class="section-header">
+      <span class="section-icon">🔑</span>
+      <h2 class="section-title">Salient Features of Indian Constitution</h2>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>#</th><th>Feature</th><th>Key Detail</th></tr>
+        <tr><td>1</td><td>Longest Written Constitution</td><td>Originally 395 articles; currently ~448 articles, 25 parts, 12 schedules</td></tr>
+        <tr><td>2</td><td>Parliamentary Form</td><td>Westminster model; nominal (President) + real (PM) executives; collective responsibility</td></tr>
+        <tr><td>3</td><td>Rigid & Flexible</td><td><span class="art">Art 368</span> — (i) Special Majority (2/3rd) (ii) Special Majority + Ratification of States (iii) Simple Majority</td></tr>
+        <tr><td>4</td><td>Fundamental Rights</td><td>Part III (Art 12–35); 6 rights; justiciable; negative in character; subject to restrictions</td></tr>
+        <tr><td>5</td><td>DPSP</td><td>Part IV (Art 36–51); non-justiciable; "Novel Feature" per Ambedkar; "Conscience of Constitution" per Granville Austin</td></tr>
+        <tr><td>6</td><td>Adult Suffrage</td><td>Voting age reduced from 21 to <strong>18 years</strong> by 61st Amendment Act 1988 (in 1989)</td></tr>
+        <tr><td>7</td><td>Independent Judiciary</td><td>Single court system; SC = guardian of Constitution; Judicial Review; Art 50 = separation from executive</td></tr>
+        <tr><td>8</td><td>Secular State</td><td>Art 25–28; added "secular" in preamble by 42nd Amendment; positive concept of secularism</td></tr>
+        <tr><td>9</td><td>Single Citizenship</td><td>Unlike USA (dual citizenship); all citizens enjoy same civil and political rights</td></tr>
+        <tr><td>10</td><td>Fundamental Duties</td><td>Part IVA; 42nd Amendment 1976 (Swaran Singh Committee); 11 duties; 11th duty added by 86th Amendment 2002</td></tr>
+        <tr><td>11</td><td>Three-Tier System</td><td>73rd and 74th Amendment; Gram Panchayat (village) → Panchayat Samiti (block) → Zila Parishad (district)</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SECTION 8: CITIZENSHIP -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="section" id="citizenship">
+    <div class="section-header">
+      <span class="section-icon">🪪</span>
+      <h2 class="section-title">Citizenship (Articles 5–11)</h2>
+    </div>
+
+    <div class="callout">
+      <strong>Key distinction:</strong> Nationality = place of birth; Citizenship = legal status in a country. Domicile = intention to reside forever.
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>Article</th><th>Subject</th><th>Key Content</th></tr>
+        <tr><td><span class="art">Art 5</span></td><td>Citizenship at commencement</td><td>Domicile in India + (a) born in India, OR (b) parent born in India, OR (c) resident for ≥5 years</td></tr>
+        <tr><td><span class="art blue">Art 6</span></td><td>Migrants from Pakistan</td><td>Before 19 July 1948 → ordinary resident; On or after 19 July 1948 → resident for ≥6 months + registered</td></tr>
+        <tr><td><span class="art red">Art 7</span></td><td>Migrants to Pakistan</td><td>Migrated to Pakistan after 1 March 1947 → NOT deemed Indian citizen (unless returned for resettlement)</td></tr>
+        <tr><td><span class="art green">Art 8</span></td><td>Indian origin persons abroad</td><td>If parents/grandparents born in India + registered at Indian diplomatic/consular mission</td></tr>
+        <tr><td><span class="art purple">Art 9</span></td><td>Foreign citizenship</td><td>Voluntarily acquiring foreign citizenship → not an Indian citizen</td></tr>
+        <tr><td><span class="art">Art 10</span></td><td>Continuance</td><td>Every person subject to law made by Parliament</td></tr>
+        <tr><td><span class="art blue">Art 11</span></td><td>Parliament's power</td><td>Parliament to regulate citizenship — leads to <strong>Citizenship Act, 1955</strong></td></tr>
+      </table>
+    </div>
+
+    <div class="callout red">
+      <div class="callout-title">🔥 Citizenship Amendment Act, 2019</div>
+      Illegal migrants who are <strong>Hindus, Sikhs, Buddhists, Jains, Parsis and Christians</strong> from <strong>Afghanistan, Bangladesh and Pakistan</strong> are eligible for citizenship. Period of naturalisation reduced from <strong>6 years to 5 years</strong>.
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SECTION 9: FUNDAMENTAL RIGHTS -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="section" id="fr">
+    <div class="section-header">
+      <span class="section-icon">⚖️</span>
+      <h2 class="section-title">Fundamental Rights — Part III (Art 12–35)</h2>
+    </div>
+
+    <div class="callout">
+      Part III is the <strong>"Magna Carta of India."</strong> Originally 7 rights; Right to Property (Art 31) removed by 44th Amendment, 1978 — now a legal right under Art 300A.
+    </div>
+
+    <h3>6 Fundamental Rights at a Glance</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Right</th><th>Articles</th><th>Key Points</th></tr>
+        <tr><td>Right to Equality</td><td><span class="art">14–18</span></td><td>Equality before law (British) + Equal protection (US); Reasonable classification allowed; Art 17 = Untouchability abolished</td></tr>
+        <tr><td>Right to Freedom</td><td><span class="art blue">19–22</span></td><td>6 freedoms under Art 19; Art 20 = 3 protections (ex-post-facto, double jeopardy, self-incrimination); Art 21 = Life & Liberty; Art 21A = Education; Art 22 = Arrest protection</td></tr>
+        <tr><td>Right Against Exploitation</td><td><span class="art green">23–24</span></td><td>Art 23 = prohibition of human trafficking & forced labour; Art 24 = no child labour in factories (below 14 years)</td></tr>
+        <tr><td>Right to Freedom of Religion</td><td><span class="art red">25–28</span></td><td>Freedom of conscience, to profess, practice, propagate religion subject to public order, morality, health</td></tr>
+        <tr><td>Cultural & Educational Rights</td><td><span class="art purple">29–30</span></td><td>Minorities can conserve language/culture; minorities can establish & manage educational institutions</td></tr>
+        <tr><td>Right to Constitutional Remedies</td><td><span class="art">32</span></td><td>"Heart and Soul of the Constitution" per Dr. Ambedkar; 5 writs; SC = protector of FR</td></tr>
+      </table>
+    </div>
+
+    <h3>Articles 12–13 (Definitions)</h3>
+    <div class="art-block">
+      <div class="art-block-header"><span class="art">Art 12</span><span class="art-block-title">Definition of "State"</span></div>
+      <div class="art-block-body">Includes: (1) Government and Parliament of India (2) Government and legislature of State (3) Local authorities (municipalities, district boards, village panchayats) (4) Other authorities (LIC, ONGC, SAIL, etc.) — even private bodies acting as instruments of State.</div>
+    </div>
+    <div class="art-block">
+      <div class="art-block-header"><span class="art blue">Art 13</span><span class="art-block-title">Laws inconsistent with FR</span></div>
+      <div class="art-block-body">
+        <ul>
+          <li>Art 13(1) = Pre-Constitutional laws inconsistent with FR → void</li>
+          <li>Art 13(2) = State shall NOT make laws abridging FR → void if made</li>
+          <li>Art 13(3) = "Law" includes ordinance, order, bye-law, rule, regulation, notification, custom</li>
+          <li><strong>Doctrines:</strong> Doctrine of Severability | Doctrine of Eclipse | <strong>Judicial Review</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Right to Equality (Art 14–18)</h3>
+    <div class="art-block">
+      <div class="art-block-header"><span class="art">Art 14</span><span class="art-block-title">Equality Before Law + Equal Protection</span></div>
+      <div class="art-block-body">
+        <strong>Equality before law</strong> = English/Dicey's Rule of Law = Negative concept (no discrimination).<br>
+        <strong>Equal protection</strong> = US origin = Positive concept (reasonable classification permitted).<br>
+        <strong>Exceptions:</strong> Art 361 (President/Governor); Armed forces; Foreign Sovereigns, Ambassadors.<br>
+        <strong>Reasonable Classification:</strong> Geographical basis; State favouring itself (Jallikattu); Taxation; Special courts.
+      </div>
+    </div>
+    <div class="art-block">
+      <div class="art-block-header"><span class="art blue">Art 15</span><span class="art-block-title">Prohibition of Discrimination</span></div>
+      <div class="art-block-body">No discrimination on grounds of: religion, race, caste, sex, place of birth.<br>
+        <strong>Exceptions:</strong>
+        <ul>
+          <li>Art 15(3) — Special provisions for women and children (1st Amendment 1951)</li>
+          <li>Art 15(4) — SC/ST/OBCs educational advancement (1st Amendment 1951)</li>
+          <li>Art 15(5) — Private educational institutions (93rd Amendment 2005)</li>
+          <li>Art 15(6) — <strong>EWS = max 10%</strong> (103rd Amendment 2019)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="art-block">
+      <div class="art-block-header"><span class="art green">Art 16</span><span class="art-block-title">Equality in Public Employment</span></div>
+      <div class="art-block-body">
+        Art 16(1) = Equality of opportunity in public employment.<br>
+        Art 16(2) = No discrimination on religion, race, caste, sex, descent, place of birth, residence.<br>
+        <strong>Exceptions:</strong> Residence condition for certain posts; Reservation for backward classes; SC/ST reservation; EWS max 10% (103rd Amendment 2019).
+      </div>
+    </div>
+    <div class="art-block">
+      <div class="art-block-header"><span class="art red">Art 17</span><span class="art-block-title">Abolition of Untouchability</span></div>
+      <div class="art-block-body">Practice of untouchability is an offence punishable by law.</div>
+    </div>
+    <div class="art-block">
+      <div class="art-block-header"><span class="art purple">Art 18</span><span class="art-block-title">Abolition of Titles</span></div>
+      <div class="art-block-body">No title (except military/academic) shall be conferred by the State. No citizen shall accept any title from a foreign State.</div>
+    </div>
+
+    <h3>Right to Freedom (Art 19–22)</h3>
+    <div class="art-block">
+      <div class="art-block-header"><span class="art">Art 19</span><span class="art-block-title">6 Freedoms (Only for Citizens)</span></div>
+      <div class="art-block-body">
+        <table style="font-size:13px;width:100%">
+          <tr><th>Sub-Art</th><th>Freedom</th><th>Restriction Article</th><th>Key Restrictions</th></tr>
+          <tr><td>19(1)(a)</td><td>Speech & Expression</td><td>19(2)</td><td>Security, Friendly relations, Public order, Decency/morality, Contempt, Defamation, Incitement, Sovereignty & Integrity (16th Amend 1963)</td></tr>
+          <tr><td>19(1)(b)</td><td>Assemble peacefully without arms</td><td>19(3)</td><td>Sovereignty & Integrity, Public order (Sec 144 CrPC)</td></tr>
+          <tr><td>19(1)(c)</td><td>Form Associations/Unions/Co-operatives</td><td>19(4)</td><td>Public order, Morality, Sovereignty & Integrity</td></tr>
+          <tr><td>19(1)(d)&(e)</td><td>Movement, Residence & Settlement</td><td>19(5)</td><td>General public interest, Protection of ST</td></tr>
+          <tr><td>19(1)(g)</td><td>Profession, Occupation, Trade, Business</td><td>19(6)</td><td>General public interest; Professional/technical qualification</td></tr>
+        </table>
+        <div style="margin-top:8px;font-size:13px;"><strong>RTI implied under 19(1)(a):</strong> Right to Information Act, 2005 (non-disclosure under Sec 8, 9, 11)</div>
+        <div style="margin-top:4px;font-size:13px;"><strong>Freedom of Press:</strong> implied in 19(1)(a) — Dr. Ambedkar: "Press is merely another way of stating an individual."</div>
+      </div>
+    </div>
+
+    <div class="art-block">
+      <div class="art-block-header"><span class="art blue">Art 20</span><span class="art-block-title">Protection in Conviction for Offences</span></div>
+      <div class="art-block-body">
+        <ul>
+          <li><strong>20(1) Ex post facto laws</strong> — Cannot be convicted for act not an offence when committed; penalty cannot exceed what was prescribed</li>
+          <li><strong>20(2) Double Jeopardy</strong> — "Nemo debet vis vexari" — no man put twice in peril for same offence</li>
+          <li><strong>20(3) Self-Incrimination</strong> — No person shall be compelled to be a witness against himself. Narco-analysis/brain-mapping/lie detector without consent = violates Art 20(3) [<strong>Selvi v. State of Karnataka</strong>]</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="art-block">
+      <div class="art-block-header"><span class="art green">Art 21</span><span class="art-block-title">Right to Life & Personal Liberty</span></div>
+      <div class="art-block-body">
+        "No person shall be deprived of his life or personal liberty except according to procedure established by law."<br><br>
+        <strong>Key Judgment — Maneka Gandhi v. Union of India (AIR 1978 SC 597):</strong> Golden Triangle Test (Art 21 + 14 + 19); "Procedure established by law" must be just, fair and reasonable; Right to travel abroad included.<br><br>
+        <strong>Sub-Rights under Art 21:</strong> Right to privacy; Right to education; Right to speedy trial; Right to bail; Right to humane treatment in prison; Right against torture; Right to live with dignity; Right to compensation; Right to clean environment; etc.
+      </div>
+    </div>
+
+    <div class="art-block">
+      <div class="art-block-header"><span class="art red">Art 21A</span><span class="art-block-title">Right to Education</span></div>
+      <div class="art-block-body">
+        Inserted by <strong>86th Amendment Act, 2002</strong>. Free and compulsory education for children aged <strong>6–14 years</strong>.<br>
+        <strong>Right of Children to Free and Compulsory Education (RTE) Act, 2009</strong> — enforced from <strong>1 April 2010</strong>.<br>
+        Art 51A(k) also added by 86th Amendment (fundamental duty for education).
+      </div>
+    </div>
+
+    <div class="art-block">
+      <div class="art-block-header"><span class="art purple">Art 22</span><span class="art-block-title">Protection Against Arrest & Detention</span></div>
+      <div class="art-block-body">
+        Right to be informed of grounds of arrest; Right to consult and be defended by a lawyer; Produced before magistrate within <strong>24 hours</strong>; Cannot be detained beyond 24 hours without magistrate's order.
+      </div>
+    </div>
+
+    <h3>FR Available to ALL (Citizens + Non-Citizens)</h3>
+    <ul class="concept-list">
+      <li>Art 14, 20, 21, 21A, 22, 23, 24, 25, 26, 27, 28</li>
+    </ul>
+    <h3>FR Available ONLY to Citizens</h3>
+    <ul class="concept-list">
+      <li>Art 15, 16, 19, 29, 30</li>
+    </ul>
+
+    <h3>Art 25–28: Right to Freedom of Religion</h3>
+    <div class="art-block">
+      <div class="art-block-header"><span class="art">Art 25</span><span class="art-block-title">Freedom of Conscience & Religious Freedom</span></div>
+      <div class="art-block-body">All persons equally entitled to freedom of conscience and right to freely profess, practice, and propagate religion — subject to public order, morality, health.<br>
+        <strong>Not absolute:</strong> No human sacrifice; No worship on busy highways; Devadasi system restricted; Loudspeaker/fireworks regulated by SC.
+      </div>
+    </div>
+    <div class="art-block">
+      <div class="art-block-header"><span class="art blue">Art 26</span><span class="art-block-title">Freedom to Manage Religious Affairs</span></div>
+      <div class="art-block-body">Right to establish and maintain institutions for religious purposes; manage own affairs in religious matters.</div>
+    </div>
+    <div class="art-block">
+      <div class="art-block-header"><span class="art green">Art 27</span><span class="art-block-title">Freedom from Taxes for Religion</span></div>
+      <div class="art-block-body">No person shall be compelled to pay taxes for promotion of any particular religion.</div>
+    </div>
+    <div class="art-block">
+      <div class="art-block-header"><span class="art red">Art 28</span><span class="art-block-title">Freedom from Religious Instruction</span></div>
+      <div class="art-block-body">No religious instruction in wholly State-funded educational institutions.</div>
+    </div>
+
+    <h3>Cultural & Educational Rights (Art 29–30)</h3>
+    <div class="art-block">
+      <div class="art-block-header"><span class="art">Art 29</span><span class="art-block-title">Protection of Interests of Minorities</span></div>
+      <div class="art-block-body">Section of citizens with distinct language, script, or culture has the right to conserve the same. No citizen shall be denied admission to State-maintained institution on grounds of religion, race, caste, language.</div>
+    </div>
+    <div class="art-block">
+      <div class="art-block-header"><span class="art blue">Art 30</span><span class="art-block-title">Right of Minorities to Establish Educational Institutions</span></div>
+      <div class="art-block-body">All minorities (religious or linguistic) shall have the right to establish and administer educational institutions. State shall not discriminate in granting aid on grounds of minority management.</div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SECTION 10: WRITS -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="section" id="writs">
+    <div class="section-header">
+      <span class="section-icon">🔨</span>
+      <h2 class="section-title">Writs — Art 32 & Art 226</h2>
+    </div>
+
+    <div class="callout blue">
+      <strong>Art 32</strong> — Right to move Supreme Court for enforcement of FRs. Dr. Ambedkar: "If I was asked to name any particular Article as the most important... I could not refer to any other Article except this one. It is the very soul of the Constitution."<br>
+      <strong>Art 226</strong> — High Courts also empowered to issue writs.
+    </div>
+
+    <div class="writ-grid">
+      <div class="writ-card">
+        <div class="writ-name">Habeas Corpus</div>
+        <div class="writ-meaning">"You may have the body / Produce the body"</div>
+        <div class="writ-desc">Most important writ for personal liberty. Order to set free a person arbitrarily arrested/detained. Used when kept in jail without legal justification.</div>
+      </div>
+      <div class="writ-card">
+        <div class="writ-name">Mandamus</div>
+        <div class="writ-meaning">"We order"</div>
+        <div class="writ-desc">Issued against public authority under a legal duty to do/forbear something. Used for public purposes to enforce performance of public duties.</div>
+      </div>
+      <div class="writ-card">
+        <div class="writ-name">Prohibition</div>
+        <div class="writ-meaning">"Prevent / Prohibit"</div>
+        <div class="writ-desc">Preventive in nature ("Prevention is better than cure"). Prevents inferior court from exceeding jurisdiction BEFORE passing order. Against judicial/quasi-judicial bodies.</div>
+      </div>
+      <div class="writ-card">
+        <div class="writ-name">Certiorari</div>
+        <div class="writ-meaning">"To certify"</div>
+        <div class="writ-desc">Remedial writ — quashes order already made without jurisdiction or in violation of natural justice. Issued AFTER order is passed. Against judicial/quasi-judicial bodies.</div>
+      </div>
+      <div class="writ-card">
+        <div class="writ-name">Quo Warranto</div>
+        <div class="writ-meaning">"By what authority"</div>
+        <div class="writ-desc">Prevents person who wrongfully usurped a public office from continuing in it. Protects FRs from govt orders based on favouritism.</div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>Prohibition vs Certiorari:</strong> Both lie against judicial/quasi-judicial bodies (NOT executive). Prohibition = before order; Certiorari = after order. They may sometimes overlap.
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SECTION 11: FUNDAMENTAL DUTIES -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="section" id="fd">
+    <div class="section-header">
+      <span class="section-icon">🫡</span>
+      <h2 class="section-title">Fundamental Duties — Part IVA, Art 51A</h2>
+    </div>
+
+    <div class="callout">
+      Added by <strong>42nd Amendment Act, 1976</strong> (Part IVA) on recommendation of <strong>Swaran Singh Committee</strong>. Originally 10 duties. <strong>11th duty added by 86th Amendment Act, 2002</strong>. Source: USSR Constitution.
+    </div>
+
+    <div class="duty-list">
+      <div class="duty-item"><span class="duty-num">51A(a)</span>Abide by the Constitution and respect its ideals, institutions, National Flag and National Anthem</div>
+      <div class="duty-item"><span class="duty-num">51A(b)</span>Cherish and follow the noble ideals of the national struggle for freedom</div>
+      <div class="duty-item"><span class="duty-num">51A(c)</span>Uphold and protect the sovereignty, unity and integrity of India</div>
+      <div class="duty-item"><span class="duty-num">51A(d)</span>Defend the country and render national service when called upon</div>
+      <div class="duty-item"><span class="duty-num">51A(e)</span>Promote harmony and common brotherhood; renounce practices derogatory to the dignity of women</div>
+      <div class="duty-item"><span class="duty-num">51A(f)</span>Value and preserve the rich heritage of our composite culture</div>
+      <div class="duty-item"><span class="duty-num">51A(g)</span>Protect and improve the natural environment including forests, lakes, rivers and wildlife</div>
+      <div class="duty-item"><span class="duty-num">51A(h)</span>Develop the scientific temper, humanism and the spirit of inquiry and reform</div>
+      <div class="duty-item"><span class="duty-num">51A(i)</span>Safeguard public property and abjure violence</div>
+      <div class="duty-item"><span class="duty-num">51A(j)</span>Strive towards excellence in all spheres of individual and collective activity</div>
+      <div class="duty-item"><span class="duty-num">51A(k) ★NEW★</span>Parent/guardian to provide education opportunities to their child between 6 and 14 years (86th Amendment 2002)</div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SECTION 12: DPSP -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="section" id="dpsp">
+    <div class="section-header">
+      <span class="section-icon">🏛️</span>
+      <h2 class="section-title">Directive Principles of State Policy (DPSP) — Part IV, Art 36–51</h2>
+    </div>
+
+    <div class="callout purple">
+      <strong>Source:</strong> Irish Constitution | <strong>Dr. Ambedkar:</strong> "Novel Feature" of Constitution | <strong>Granville Austin (American historian):</strong> "Conscience of the Constitution" | <strong>Non-justiciable</strong> — not legally enforceable by courts but fundamental in governance.
+    </div>
+
+    <h3>Classification</h3>
+    <div class="table-wrap">
+      <table class="dpsp-table">
+        <tr><th>Category</th><th>Articles</th><th>Content</th></tr>
+        <tr><td colspan="3" style="background:#f8f8f7;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:0.04em;">Social & Economic Charter</td></tr>
+        <tr><td><span class="art">Art 38</span></td><td>Social Order</td><td>State to promote welfare; minimise inequalities in income, status, facilities, opportunities</td></tr>
+        <tr><td><span class="art">Art 39</span></td><td>Economic Justice</td><td>Equal means of livelihood; equitable distribution of resources; no concentration of wealth; <strong>equal pay for equal work</strong>; protection of children's health</td></tr>
+        <tr><td colspan="3" style="background:#f8f8f7;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:0.04em;">Social Security Charter</td></tr>
+        <tr><td><span class="art blue">Art 39A</span></td><td>Free Legal Aid</td><td>Equal justice; provide free legal aid to poor (added by 42nd Amendment)</td></tr>
+        <tr><td><span class="art blue">Art 41</span></td><td>Right to Work</td><td>Right to work, education, public assistance in unemployment, old age, sickness, disability</td></tr>
+        <tr><td><span class="art blue">Art 42</span></td><td>Humane Work Conditions</td><td>Just and humane conditions of work and maternity relief</td></tr>
+        <tr><td><span class="art blue">Art 43</span></td><td>Living Wage</td><td>Living wage and decent standard of life for workers</td></tr>
+        <tr><td><span class="art blue">Art 43A</span></td><td>Worker Participation</td><td>Workers' participation in management of industries (42nd Amendment 1976)</td></tr>
+        <tr><td><span class="art blue">Art 45</span></td><td>Early Childhood Care</td><td>Provision for early childhood care and education for children below 6 years</td></tr>
+        <tr><td><span class="art blue">Art 46</span></td><td>SC/ST Welfare</td><td>Promote educational and economic interests of weaker sections especially SC/ST</td></tr>
+        <tr><td><span class="art blue">Art 47</span></td><td>Public Health</td><td>Raise nutrition and standard of living; prohibition of intoxicating drinks and drugs</td></tr>
+        <tr><td colspan="3" style="background:#f8f8f7;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:0.04em;">Community Welfare Charter</td></tr>
+        <tr><td><span class="art green">Art 40</span></td><td>Panchayati Raj</td><td>Organisation of Village Panchayat</td></tr>
+        <tr><td><span class="art green">Art 44</span></td><td>Uniform Civil Code</td><td>Uniform Civil Code for all citizens</td></tr>
+        <tr><td><span class="art green">Art 48</span></td><td>Agriculture</td><td>Organise agriculture scientifically; preserve & improve breeds; prohibit slaughter of cows/calves</td></tr>
+        <tr><td><span class="art green">Art 48A</span></td><td>Environment</td><td>Protect and improve environment, safeguard forests and wildlife (42nd Amendment 1976)</td></tr>
+        <tr><td><span class="art green">Art 49</span></td><td>Heritage</td><td>Protection of monuments and places of national importance</td></tr>
+        <tr><td><span class="art green">Art 50</span></td><td>Separation</td><td>Separate the judiciary from executive in public services</td></tr>
+        <tr><td><span class="art green">Art 51</span></td><td>International Peace</td><td>Promotion of international peace and security</td></tr>
+      </table>
+    </div>
+
+    <h3>FR vs DPSP — Key Differences</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Fundamental Rights</th><th>DPSP</th></tr>
+        <tr><td>Negative — restricts State from doing certain things</td><td>Positive — requires State to do certain things</td></tr>
+        <tr><td>Justiciable (legally enforceable)</td><td>Non-justiciable</td></tr>
+        <tr><td>Aims to establish Political Democracy</td><td>Aims to establish Economic and Social Democracy</td></tr>
+        <tr><td>Legal sanctions</td><td>Moral and political sanctions</td></tr>
+        <tr><td>Welfare of individual</td><td>Welfare of community</td></tr>
+        <tr><td>Automatically enforced</td><td>Non-enforceable</td></tr>
+        <tr><td>Law violating FR is unconstitutional</td><td>Courts cannot declare law violative of DPSP</td></tr>
+      </table>
+    </div>
+
+    <div class="callout green">
+      <strong>FR vs DPSP Conflict:</strong> SC initially upheld FR over DPSP. Some cases gave DPSP priority. Recent approach = <strong>Harmonious Construction (FR = DPSP)</strong>.
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SECTION 13: KEY AMENDMENTS -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="section" id="amendments">
+    <div class="section-header">
+      <span class="section-icon">✏️</span>
+      <h2 class="section-title">Key Constitutional Amendments</h2>
+      <span class="section-badge">EXAM HOT</span>
+    </div>
+
+    <div class="amend-card">
+      <span class="amend-num">1st (1951)</span>
+      <div class="amend-content"><strong>Ninth Schedule; Art 15(4) & 19(6) added</strong> — Special provisions for SC/ST/OBC; reasonable restrictions on trade.</div>
+    </div>
+    <div class="amend-card">
+      <span class="amend-num">7th (1956)</span>
+      <div class="amend-content"><strong>States Reorganisation</strong> — Same person can hold governorship in 2 or more states</div>
+    </div>
+    <div class="amend-card">
+      <span class="amend-num">16th (1963)</span>
+      <div class="amend-content"><strong>Sovereignty & Integrity as restriction</strong> — Added as restriction under Art 19(2), 19(3), 19(4) on speech, assembly, associations</div>
+    </div>
+    <div class="amend-card">
+      <span class="amend-num">42nd (1976)</span>
+      <div class="amend-content"><strong>"Mini Constitution" / Most Comprehensive</strong> — Added "Socialist," "Secular," "Integrity" to Preamble; Added Fundamental Duties (Part IVA, Art 51A); Added Art 39A (free legal aid), 43A (worker participation), 48A (environment); President bound by advice of CoM; Made DPSP superior to FR (later reversed by 44th)</div>
+    </div>
+    <div class="amend-card">
+      <span class="amend-num">44th (1978)</span>
+      <div class="amend-content"><strong>Right to Property removed</strong> — Art 31 deleted; Right to Property made a legal right under Art 300A. Restored Art 19(1)(f) earlier removed by 42nd. Restored supremacy of FR over DPSP</div>
+    </div>
+    <div class="amend-card">
+      <span class="amend-num">61st (1988)</span>
+      <div class="amend-content"><strong>Voting Age reduced</strong> — From 21 years to <strong>18 years</strong> (effective 1989)</div>
+    </div>
+    <div class="amend-card">
+      <span class="amend-num">73rd (1992)</span>
+      <div class="amend-content"><strong>Panchayati Raj</strong> — Constitutional status to Panchayats; 3-tier system; Part IX; 11th Schedule</div>
+    </div>
+    <div class="amend-card">
+      <span class="amend-num">74th (1992)</span>
+      <div class="amend-content"><strong>Municipalities</strong> — Constitutional status to Urban Local Bodies; Part IX-A; 12th Schedule</div>
+    </div>
+    <div class="amend-card">
+      <span class="amend-num">86th (2002)</span>
+      <div class="amend-content"><strong>Right to Education</strong> — Art 21A added (free & compulsory education 6–14 yrs); Art 51A(k) added; RTE Act 2009 (enforced 1 April 2010)</div>
+    </div>
+    <div class="amend-card">
+      <span class="amend-num">93rd (2005)</span>
+      <div class="amend-content"><strong>Art 15(5) added</strong> — Special provisions for admission to private educational institutions for OBC/SC/ST (except minority institutions)</div>
+    </div>
+    <div class="amend-card">
+      <span class="amend-num">103rd (2019)</span>
+      <div class="amend-content"><strong>EWS Reservation</strong> — Art 15(6) and Art 16(4B) added; 10% reservation for Economically Weaker Sections in education and public employment</div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SECTION 14: GOVERNOR -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="section" id="governor">
+    <div class="section-header">
+      <span class="section-icon">🏛️</span>
+      <h2 class="section-title">Governor of the State (Art 153–162)</h2>
+    </div>
+
+    <div class="callout">
+      State Executive = Part VI of COI (Art 153–167). Components: Governor, CM, Council of Ministers, Advocate General. <strong>Dual Role:</strong> Constitutional Head of State + Agent of Central Government.
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>Article</th><th>Subject</th></tr>
+        <tr><td><span class="art">Art 153</span></td><td>Governor of States</td></tr>
+        <tr><td><span class="art">Art 154</span></td><td>Executive power of the State</td></tr>
+        <tr><td><span class="art">Art 155</span></td><td>Appointment of Governor (by President — warrant under hand and seal)</td></tr>
+        <tr><td><span class="art">Art 156</span></td><td>Term of office — 5 years, subject to President's pleasure</td></tr>
+        <tr><td><span class="art">Art 157</span></td><td>Qualifications: (1) Citizen of India (2) Completed 35 years of age</td></tr>
+        <tr><td><span class="art">Art 158</span></td><td>Conditions of Office (cannot be MP/MLA; no office of profit)</td></tr>
+        <tr><td><span class="art">Art 159</span></td><td>Oath administered by Chief Justice of the State HC</td></tr>
+        <tr><td><span class="art">Art 161</span></td><td>Power to grant pardon, etc.</td></tr>
+        <tr><td><span class="art">Art 162</span></td><td>Extent of executive power of State</td></tr>
+      </table>
+    </div>
+
+    <h3>Discretionary Powers of Governor</h3>
+    <ul class="concept-list">
+      <li>Reservation of a bill for consideration of the President</li>
+      <li>Recommendation for imposition of President's Rule in the state</li>
+      <li>Administrator of adjoining union territory</li>
+      <li>Determining royalty amount payable to Tribal District Council (Assam, Meghalaya, Tripura, Mizoram)</li>
+      <li>Seeking information from CM on administrative and legislative matters</li>
+    </ul>
+
+    <h3>Immunities</h3>
+    <ul class="concept-list">
+      <li>Personal immunity from legal liability for official acts</li>
+      <li>Cannot be arrested or imprisoned during term</li>
+      <li>Civil proceedings: two months' notice required during term (for personal acts)</li>
+    </ul>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SECTION 15: CM & COUNCIL OF MINISTERS -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="section" id="cm">
+    <div class="section-header">
+      <span class="section-icon">👤</span>
+      <h2 class="section-title">Chief Minister & State Council of Ministers (Art 163–167)</h2>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>Article</th><th>Subject</th></tr>
+        <tr><td><span class="art">Art 163</span></td><td>Council of Ministers to aid and advise Governor (binding after 42nd & 44th Amendment)</td></tr>
+        <tr><td><span class="art">Art 164</span></td><td>Appointment of CM by Governor; collective responsibility to Legislative Assembly; CoM ≤ 15% of LA (164 1A); anti-defection clause (164 1B)</td></tr>
+        <tr><td><span class="art">Art 165</span></td><td>Advocate General of the State</td></tr>
+        <tr><td><span class="art">Art 166</span></td><td>Conduct of business of Government of a State</td></tr>
+        <tr><td><span class="art">Art 167</span></td><td>Duties of CM: furnishing information to Governor</td></tr>
+      </table>
+    </div>
+
+    <h3>Key Facts — CM</h3>
+    <ul class="concept-list">
+      <li><strong>Appointment:</strong> Leader of majority party in State Legislative Assembly; Personal discretion if no clear majority</li>
+      <li><strong>Tenure:</strong> Not fixed; holds office at pleasure of Governor; Cannot be dismissed if enjoying majority</li>
+      <li>Death/Resignation/Dismissal of CM dissolves the entire CoM</li>
+    </ul>
+
+    <h3>Collective vs Individual Responsibility</h3>
+    <div class="compare-grid">
+      <div class="compare-col left">
+        <div class="compare-col-title left">Collective Responsibility</div>
+        <ul>
+          <li>All ministers jointly responsible for acts of commission/omission</li>
+          <li>"Swim together or sink together"</li>
+          <li>No-confidence motion → all must resign</li>
+          <li>Cabinet decisions bind ALL ministers</li>
+        </ul>
+      </div>
+      <div class="compare-col right">
+        <div class="compare-col-title right">Individual Responsibility</div>
+        <ul>
+          <li>Implicit in the Doctrine of Pleasure (Art 164)</li>
+          <li>Minister who lost confidence of CM can be removed</li>
+          <li>Wrongdoing or difference of opinion → CM can ask to resign</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Classification of Ministers</h3>
+    <ul class="concept-list">
+      <li><strong>Cabinet Ministers</strong> — Important ministries (Home, Defence, Finance, External Affairs); attend Cabinet meetings; policy-making</li>
+      <li><strong>Ministers of State (MoS)</strong> — Independent charge OR attached to Cabinet Minister; do NOT attend Cabinet meetings unless specially invited</li>
+      <li><strong>Deputy Ministers</strong> — No independent charge; attached to Cabinet Ministers or MoS; not part of Cabinet</li>
+    </ul>
+
+    <h3>Cabinet</h3>
+    <ul class="concept-list">
+      <li>Smaller body: 20–30 ministers (Cabinet Ministers only)</li>
+      <li>Meets frequently (usually ≥ once a week)</li>
+      <li>Policy decisions binding on all ministers; supervisory role over CoM</li>
+    </ul>
+
+    <h3>Kitchen Cabinet</h3>
+    <ul class="concept-list">
+      <li>Super-small body with highest decision-making powers</li>
+      <li>Informal and extra-constitutional; developed to ensure quick, efficient decisions</li>
+      <li>Helps maintain secrecy in important political matters; also exists in USA and Britain</li>
+    </ul>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SECTION 16: STATE LEGISLATURE -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="section" id="legislature">
+    <div class="section-header">
+      <span class="section-icon">🗳️</span>
+      <h2 class="section-title">State Legislature (Art 168–212)</h2>
+    </div>
+
+    <div class="callout">
+      States with <strong>Bicameral Legislatures</strong>: Andhra Pradesh, Maharashtra, Uttar Pradesh, Telangana, Bihar, Karnataka (6 states). All others = Unicameral.
+    </div>
+
+    <div class="two-col">
+      <div class="key-card">
+        <div class="key-card-title">🏛️ Legislative Assembly (Lower House)</div>
+        <p><strong>Members:</strong> Directly elected by people (universal adult franchise). Max = 500, Min = 60. Exceptions: Arunachal Pradesh, Sikkim, Goa = 30; Mizoram = 40; Nagaland = 46.<br><strong>Term:</strong> 5 years (auto-dissolves on expiration)</p>
+      </div>
+      <div class="key-card">
+        <div class="key-card-title">🏛️ Legislative Council (Upper House)</div>
+        <p><strong>Members:</strong> Indirectly elected. Max = 1/3 of Assembly, Min = 40.<br><strong>Nature:</strong> Permanent body (NOT subject to dissolution). 1/3 retire every 2 years; member serves for 6 years.</p>
+      </div>
+    </div>
+
+    <h3>Composition of Legislative Council (Manner of Election)</h3>
+    <ul class="concept-list">
+      <li><strong>1/3</strong> — Elected by members of local bodies (municipalities, district boards, etc.)</li>
+      <li><strong>1/12</strong> — Elected by graduates of 3 years standing in the state</li>
+      <li><strong>1/12</strong> — Elected by teachers of 3 years standing (secondary school level or above)</li>
+      <li><strong>1/3</strong> — Elected by members of Legislative Assembly (from non-assembly members)</li>
+      <li><strong>Remainder</strong> — Nominated by Governor (literature, science, art, co-operative movement, social service)</li>
+      <li>Total: <strong>5/6 indirectly elected + 1/6 nominated</strong> by Governor</li>
+    </ul>
+
+    <h3>Qualifications for State Legislature</h3>
+    <ul class="concept-list">
+      <li>Citizen of India</li>
+      <li>Age: ≥30 for Legislative Council; ≥25 for Legislative Assembly</li>
+      <li>Must take oath; elector for assembly constituency in the concerned state</li>
+    </ul>
+
+    <h3>Disqualifications</h3>
+    <ul class="concept-list">
+      <li>Holds any Government office of profit</li>
+      <li>Declared unsound mind by competent court</li>
+      <li>Undischarged insolvent</li>
+      <li>Not a citizen of India or voluntarily acquired foreign citizenship</li>
+      <li>Under any law made by Parliament</li>
+      <li>Anti-defection law (Tenth Schedule) — decided by Speaker/Chairman; Subject to Judicial Review (<strong>Kihota Hollohan v. Zachilhu, 1992</strong>)</li>
+    </ul>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SECTION 17: PM & UNION -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="section" id="pm">
+    <div class="section-header">
+      <span class="section-icon">🧳</span>
+      <h2 class="section-title">Prime Minister & Central Council of Ministers (Art 74–78)</h2>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>Article</th><th>Subject</th></tr>
+        <tr><td><span class="art">Art 74</span></td><td>PM and CoM to aid and advise President (advice binding after 42nd & 44th Amendments)</td></tr>
+        <tr><td><span class="art">Art 75</span></td><td>Appointment by President on advice of PM; CoM collectively responsible to Lok Sabha; CoM ≤ 15% of Lok Sabha (75 1A); oath administered by President (75 4)</td></tr>
+        <tr><td><span class="art">Art 76</span></td><td>Attorney General of India</td></tr>
+        <tr><td><span class="art">Art 77</span></td><td>Conduct of business of Government of the Union</td></tr>
+        <tr><td><span class="art">Art 78</span></td><td>Duties of PM: furnishing information to President</td></tr>
+        <tr><td><span class="art">Art 52</span></td><td>Head of the State = President of India</td></tr>
+      </table>
+    </div>
+
+    <div class="highlight-quote">
+      "He is, rather, a sun around which planets revolve. He is the keystone of the constitution. All roads in the constitution lead to the Prime Minister."
+      <cite>— Ivor Jennings on the Prime Minister</cite>
+    </div>
+
+    <h3>Union Executive Components</h3>
+    <ul class="concept-list">
+      <li>President (Art 52 — Head of State)</li>
+      <li>Vice President | Prime Minister | Council of Ministers | Attorney General of India</li>
+    </ul>
+
+    <h3>PM Appointment & Tenure</h3>
+    <ul class="concept-list">
+      <li>Leader of majority party in Lok Sabha; personal discretion if no clear majority</li>
+      <li>PM can be member of Lok Sabha OR Rajya Sabha (unlike Britain — House of Commons requirement)</li>
+      <li>Tenure: not fixed; holds office during pleasure of President</li>
+      <li>Cannot be dismissed if enjoying majority in Lok Sabha</li>
+    </ul>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SECTION 18: MASTER CASE LAW LIST -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="section" id="caselaws">
+    <div class="section-header">
+      <span class="section-icon">📋</span>
+      <h2 class="section-title">Master Case Law List</h2>
+      <span class="section-badge">MUST KNOW</span>
+    </div>
+
+    <div class="case">
+      <div class="case-name">S.R. Bommai v. Union of India</div>
+      <div class="case-held"><strong>Held:</strong> "Secularism is the basic feature of the Constitution." (Art 356 — President's Rule)</div>
+    </div>
+
+    <div class="case">
+      <div class="case-name">A.K. Gopalan v. State of Madras (AIR 1950 SC 27)</div>
+      <div class="case-held"><strong>Held:</strong> Narrow interpretation of "personal liberty" (Art 21) — merely liberty of physical body. Articles 19 and 21 independent. "Procedure established by law" ≠ "Due process"</div>
+    </div>
+
+    <div class="case">
+      <div class="case-name">Maneka Gandhi v. Union of India (AIR 1978 SC 597)</div>
+      <div class="case-held"><strong>Held:</strong> Broadened "personal liberty." Art 21 + 14 + 19 — Golden Triangle Test. Procedure must be just, fair and reasonable. Right to travel abroad is part of personal liberty. "Law" includes rules of natural justice.</div>
+    </div>
+
+    <div class="case">
+      <div class="case-name">Francis Coralie Mullin v. Union Territory of Delhi (AIR 1981 SC 746)</div>
+      <div class="case-held"><strong>Held:</strong> Right to life includes right to live with human dignity.</div>
+    </div>
+
+    <div class="case">
+      <div class="case-name">Mohini Jain v. State of Karnataka (AIR 1992 SC 1858)</div>
+      <div class="case-held"><strong>Held:</strong> Charging capitation fee is illegal; right to education flows from Art 21 (all ages).</div>
+    </div>
+
+    <div class="case">
+      <div class="case-name">Unnikrishnan v. State of AP (1993) 1 SC 645</div>
+      <div class="case-held"><strong>Held:</strong> Right to free and compulsory education only for 6–14 years age group (not all ages). Led to 86th Amendment Act, 2002.</div>
+    </div>
+
+    <div class="case">
+      <div class="case-name">Kedarnath v. State of Bihar</div>
+      <div class="case-held"><strong>Subject:</strong> Sec 124A of IPC (Sedition Law) — Art 19(1)(a) and Free Speech</div>
+    </div>
+
+    <div class="case">
+      <div class="case-name">Kedarnath v. State of West Bengal (AIR 1953 SC 404)</div>
+      <div class="case-held"><strong>Subject:</strong> Ex-post-facto law (Art 20(1)) — Enhancement of punishment does not apply retrospectively.</div>
+    </div>
+
+    <div class="case">
+      <div class="case-name">Maqbool Hussain v. State of Bombay</div>
+      <div class="case-held"><strong>Held:</strong> Customs authority is not judicial in nature; Art 20(2) — Double Jeopardy does not apply to customs proceedings.</div>
+    </div>
+
+    <div class="case">
+      <div class="case-name">Nandini Satpathy v. PL Dani</div>
+      <div class="case-held"><strong>Held:</strong> Accused has right to silence during interrogation if answer would incriminate. Art 20(3) — self-incrimination protection.</div>
+    </div>
+
+    <div class="case">
+      <div class="case-name">Selvi v. State of Karnataka</div>
+      <div class="case-held"><strong>Held:</strong> Compulsory Narco-analysis, brain-mapping, and polygraph tests without consent = unconstitutional, violate right to privacy and Art 20(3).</div>
+    </div>
+
+    <div class="case">
+      <div class="case-name">Shreya Singal v. Union of India</div>
+      <div class="case-held"><strong>Subject:</strong> Struck down Sec 66A of IT Act — violation of Art 19(1)(a) Free Speech.</div>
+    </div>
+
+    <div class="case">
+      <div class="case-name">Anuradha Bhasin v. Union of India (2020)</div>
+      <div class="case-held"><strong>Held:</strong> Right to internet is a fundamental right under Art 19(1)(a) and 19(1)(g). Freedom of press was not violated as circulation was permitted.</div>
+    </div>
+
+    <div class="case">
+      <div class="case-name">Balaji v. State of Mysore (AIR 1960 Mys 338)</div>
+      <div class="case-held"><strong>Held:</strong> Caste alone cannot be the sole test to ascertain backwardness (Art 16).</div>
+    </div>
+
+    <div class="case">
+      <div class="case-name">Preeti Sagar Srivastava v. State of Madhya Pradesh (AIR 1999 SC 2894)</div>
+      <div class="case-held"><strong>Held (4:1):</strong> Merit alone can be the criterion for selecting students for medical and engineering courses (Art 16).</div>
+    </div>
+
+    <div class="case">
+      <div class="case-name">Resham v. State of Karnataka (Hijab Case)</div>
+      <div class="case-held"><strong>Held:</strong> Hijab is not an essential religious practice in Islam. School uniform is not violative of fundamental rights. Hijab ban GO of 5 Feb 2022 upheld (Karnataka HC, Full Bench).</div>
+    </div>
+
+    <div class="case">
+      <div class="case-name">University of Mysore v. Govinda Rao (AIR 1965 SC 491)</div>
+      <div class="case-held"><strong>Subject:</strong> Writ of Quo Warranto — prevents wrongful usurpation of public office.</div>
+    </div>
+
+    <div class="case">
+      <div class="case-name">Kihota Hollohan v. Zachilhu (1992)</div>
+      <div class="case-held"><strong>Held:</strong> Decision of Speaker under Anti-Defection Law (10th Schedule) is subject to Judicial Review.</div>
+    </div>
+
+    <div class="case">
+      <div class="case-name">AIIMS Students Union v. AIIMS</div>
+      <div class="case-held"><strong>Subject:</strong> Related to Fundamental Duties (Art 51A)</div>
+    </div>
+
+    <div class="case">
+      <div class="case-name">Sarbananda Sonowal v. Union of India</div>
+      <div class="case-held"><strong>Subject:</strong> Related to Fundamental Duties — protection of sovereignty and integrity (Art 51A(c))</div>
+    </div>
+
+    <div class="case">
+      <div class="case-name">Bombay Hawkers Union v. Bombay Municipal Corporation (AIR 1985 SC 1206)</div>
+      <div class="case-held"><strong>Subject:</strong> Art 19(1)(g) — Street hawkers' right to carry on trade; reasonable restriction permitted.</div>
+    </div>
+  </section>
+
+  <hr class="divider">
+  <div style="text-align:center;color:var(--muted);font-size:13px;padding:24px 0 48px;">
+    <p>📚 Created for VIT India Studies Exam Revision · All Notes from Course Material</p>
+    <p style="margin-top:4px;">Good luck! 🎯</p>
+  </div>
+
+</main>
+
+<script>
+  // Active nav on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-item[href^="#"]');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      if (window.scrollY >= section.offsetTop - 80) { current = section.getAttribute('id'); }
+    });
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + current) { link.classList.add('active'); }
+    });
+  });
+</script>
+
+</body>
+</html>
